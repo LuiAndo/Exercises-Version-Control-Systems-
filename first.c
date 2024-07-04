@@ -7,7 +7,13 @@ int main()
   int head = 0;
   int tail = 0;
 
+  int name[20];
+
   srand(time(NULL));
+
+  printf("Who are you?\n");
+  scanf("%s", name);
+  printf("Hello, %s!\n", name);
 
   printf("tossing a coin...\n");
 
@@ -26,6 +32,8 @@ int main()
     }
 
   printf("Heads: %d, Tails: %d\n", head, tail);
+  if (head > tail) printf("You won\n");
+  else printf("You lost\n");
 
   return 0;
 }
